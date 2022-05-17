@@ -178,7 +178,7 @@ def generateChiSquaredResults(inf_num, param):
         print("H1: Number of vaccines distributed in Michigan and Missouri are DEPENDENT of Number of Patients on Ventilator\n")
 
         print("Q-Observed using Chi-Squared test: {}\n".format(param))
-        print("DoF: 1 \np-value (Pr(CHI_sq_dof > {}) from chi_square table: 0.01\n".format(param))
+        print("DoF: 1 \np-value (Pr(CHI_sq_dof > {}) from chi_square table: 0.00001\n".format(param))
 
         print("Since, p-value < 0.05 so H0 will be REJECTED!!")
         print("Thus, Number of vaccines distributed in Michigan and Missouri are DEPENDENT of Number of Patients on Ventilator during 2020-12-14 to 2021-03-7")
