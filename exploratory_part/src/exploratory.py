@@ -109,7 +109,7 @@ def chi_squared_test(var_a, var_b):
 
 
 def generateHeader(num, start, end):
-    print("==============================================================================================")
+    print("********************************************************************************")
     print("Inference {}:\n".format(num))
     print("During time interval: {start} - {end}\n".format(start=start, end=end))
 
@@ -136,9 +136,9 @@ def ChiSquaredTest(inf_num, x, y):
 
 
 def generateChiSquaredResults(inf_num, param):
-    print("------------------------------------")
+    print("**************************************")
     print("CHI-Square Test")
-    print("------------------------------------\n")
+    print("**************************************\n")
 
     if inf_num == 1:
         print("H0: Number of cases in Michigan and Missouri are INDEPENDENT of the Number of hospitalizations")
@@ -150,11 +150,11 @@ def generateChiSquaredResults(inf_num, param):
         print("Since, p-value < 0.05 so H0 will be REJECTED!!")
         print("Thus, the number of cases in Michigan and Missouri are DEPENDENT on the Number of Hospitalizations during 2020-04-10 to 2020-06-02")
 
-        print("------------------------------------\n")
+        print("**************************************\n")
 
         print(
             "Above two tests shows the number of cases in Michigan and Missouri and the Number of hospitalizations in the states are DEPENDENT and POSITIVELY CORRELATED complementing the observation that when COVID-19 initially broke out, there weren't any medicines available in the market. Thus, it required infected people with symptoms to be hospitalized during 2020-04-10 - 2020-06-02!!")
-        print("==============================================================================================")
+        print("-------------------------------------------------------------------------------------------------")
 
     elif inf_num == 2:
         print("H0: Number of vaccines distributed in Michigan and Missouri are INDEPENDENT with Number of hospitalizations")
@@ -166,12 +166,12 @@ def generateChiSquaredResults(inf_num, param):
         print("Since, p-value < 0.05 so H0 will be ACCEPTED!!")
         print("Thus, Number of vaccines distributed in Michigan and Missouri are DEPENDENT with Number of hospitalizations during 2020-12-14 to 2021-03-7")
 
-        print("------------------------------------\n")
+        print("**************************************\n")
 
         print(
             "Above two tests shows Number of vaccines distributed in Michigan and Missouri and Number of hospitalizations are DEPENDENT and NEGATIVELY CORRELATED. This re-inforces the observation that as vaccine distributions increased, the number of hospitalizations decreased. This gives us an overall indication of the vaccine's efficacy on COVID-19 and suggests that the vaccines had a positive impact in the fight against COVID-19.")
 
-        print("==============================================================================================")
+        print("-------------------------------------------------------------------------------------------------")
 
     elif inf_num == 3:
         print("H0: Number of vaccines distributed in Michigan and Missouri are INDEPENDENT of Number of Patients on Ventilator")
@@ -183,11 +183,11 @@ def generateChiSquaredResults(inf_num, param):
         print("Since, p-value < 0.05 so H0 will be REJECTED!!")
         print("Thus, Number of vaccines distributed in Michigan and Missouri are DEPENDENT of Number of Patients on Ventilator during 2020-12-14 to 2021-03-7")
 
-        print("------------------------------------\n")
+        print("**************************************\n")
 
         print(
-            "Above two tests shows Number of vaccines distributed in Michigan and Missouri and Number of Patients on Ventilator are DEPENDENT and NEGATIVE LINEARLY CORRELATED during 2020-10-18 to 2020-11-16 complementing the efficacy results of vaccines. The results clearly shows the efficacy of the vaccines are good and thus, number of patients required to be put on ventilators has reduced after vaccine distribution began.")
-        print("==============================================================================================")
+            "Above two tests shows Number of vaccines distributed in Michigan and Missouri and Number of Patients on Ventilator are DEPENDENT and NEGATIVE LINEARLY CORRELATED during 2020-12-14 to 2021-03-7 complementing the efficacy results of vaccines. The results clearly shows the efficacy of the vaccines are good and thus, number of patients required to be put on ventilators has reduced after vaccine distribution began.")
+        print("-------------------------------------------------------------------------------------------------")
 
 
 def generatePearsonTestResults(inf_num, coeff):
@@ -262,7 +262,7 @@ def generateInferences(hsptl_df, cases_df, vac_df):
 
 def getFilters(start, end, hsptl_df, cases_df, vac_df):
     start_date = pd.to_datetime(start)
-    #import pdb ; pdb.set_trace()
+
     end_date = pd.to_datetime(end)
 
     cases_df_filter = cases_df.loc[
